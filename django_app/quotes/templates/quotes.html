@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quotes</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .quote { border-bottom: 1px solid #ddd; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Quotes</h1>
+    {% for q in quotes %}
+        <div class="quote">
+            <p><b>{{ q.quote }}</b></p>
+            <p>Author: {{ q.author }}</p>
+            <p>Tags: {{ q.tags }}</p>
+            <a href="{{ q.author_profile }}">Author Profile</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
